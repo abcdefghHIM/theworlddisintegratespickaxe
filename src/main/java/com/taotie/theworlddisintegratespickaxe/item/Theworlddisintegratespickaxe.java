@@ -1,7 +1,6 @@
 package com.taotie.theworlddisintegratespickaxe.item;
 
 import java.util.List;
-import java.util.Set;
 
 import com.taotie.theworlddisintegratespickaxe.creativetab.CreativeTabsLoader;
 
