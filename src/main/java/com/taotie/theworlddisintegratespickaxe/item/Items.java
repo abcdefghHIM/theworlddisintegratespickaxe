@@ -1,5 +1,6 @@
 package com.taotie.theworlddisintegratespickaxe.item;
 
+import com.taotie.theworlddisintegratespickaxe.creativetab.CreativeTabsLoader;
 import net.minecraft.item.Item;
 
 public enum Items {
@@ -7,10 +8,11 @@ public enum Items {
 	Themixthespuriouswiththegenuinepickaxe(new Themixthespuriouswiththegenuinepickaxe()),
 	Thespacematerialconversionpickaxe(new Thespacematerialconversionpickaxe()),
 	Thetimedisintegratespickaxe(new Thetimedisintegratespickaxe()),
-	Therelativespacecollapsepickaxe(new Therelativespacecollapsepickaxe());
+	Therelativespacecollapsepickaxe(new Therelativespacecollapsepickaxe()),
+	CriticalGem(new IItem("criticalgem","CriticalGem", CreativeTabsLoader.TheworlddisintegratespickaxeTab));
 	private Item item;
 
-	private Items(Item item) {
+	Items(Item item) {
 		this.item = item;
 	}
 
