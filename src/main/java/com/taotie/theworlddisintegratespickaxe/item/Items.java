@@ -9,7 +9,10 @@ public enum Items {
 	Thespacematerialconversionpickaxe(new Thespacematerialconversionpickaxe()),
 	Thetimedisintegratespickaxe(new Thetimedisintegratespickaxe()),
 	Therelativespacecollapsepickaxe(new Therelativespacecollapsepickaxe()),
-	CriticalGem(new IItem("criticalgem","CriticalGem", CreativeTabsLoader.TheworlddisintegratespickaxeTab));
+	CompressedGem(new IItem("compressedgem","CompressedGem",CreativeTabsLoader.TheworlddisintegratespickaxeTab)),
+	CriticalGem(new IItem("criticalgem","CriticalGem", CreativeTabsLoader.TheworlddisintegratespickaxeTab)),
+	FallenGem(new IItem("fallengem","FallenGem", CreativeTabsLoader.TheworlddisintegratespickaxeTab));
+	
 	private Item item;
 
 	Items(Item item) {
