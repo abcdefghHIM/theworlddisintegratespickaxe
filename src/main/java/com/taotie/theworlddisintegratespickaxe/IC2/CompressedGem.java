@@ -7,7 +7,9 @@ import ic2.api.recipe.MachineRecipeResult;
 import ic2.api.recipe.RecipeOutput;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fml.common.Optional;
 
+@Optional.Interface(modid = "ic2", iface = "ic2.api.recipe.ICannerBottleRecipeManager")
 public class CompressedGem implements ICannerBottleRecipeManager{
 
 	@Override
