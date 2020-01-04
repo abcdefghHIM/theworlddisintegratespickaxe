@@ -26,7 +26,7 @@ public class EventLoader {
 		BufferBuilder buffer = tessellator.getBuffer();
 		GL11.glPushMatrix();
 		GL11.glRotated(((int) System.currentTimeMillis() % 360000) / 100D, 0, 1, 0);
-		GL11.glTranslated(event.getPartialTicks(), event.getPartialTicks() + 0.01, event.getPartialTicks());
+		GL11.glTranslated(0, 0.01, 0);
 		GL11.glDisable(GL11.GL_CULL_FACE);
 		GL11.glDisable(GL11.GL_LIGHTING);
 
