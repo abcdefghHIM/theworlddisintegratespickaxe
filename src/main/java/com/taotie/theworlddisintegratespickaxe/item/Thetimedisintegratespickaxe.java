@@ -26,12 +26,12 @@ public class Thetimedisintegratespickaxe extends ItemPickaxe {
 		this.setUnlocalizedName("Thetimedisintegratespickaxe");
 		this.setCreativeTab(CreativeTabsLoader.TheworlddisintegratespickaxeTab);
 	}
-	
+
 	@Override
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add(I18n.format("book.inf"));
 	}
-	
+
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		ItemStack itemstack = playerIn.getHeldItem(handIn);
