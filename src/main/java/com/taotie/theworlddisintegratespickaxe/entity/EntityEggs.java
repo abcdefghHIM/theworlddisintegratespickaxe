@@ -3,7 +3,7 @@ package com.taotie.theworlddisintegratespickaxe.entity;
 import net.minecraft.util.ResourceLocation;
 
 public enum EntityEggs {
-	EntityAAA(new ResourceLocation(""), 0xffff66, 0x660000);
+	EntityTaoTie(new ResourceLocation("TaoTie"), 0xffff66, 0x660000);
 	private ResourceLocation name;
 	private int primary;
 	private int secondary;

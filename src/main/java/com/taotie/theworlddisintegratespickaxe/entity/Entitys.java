@@ -6,7 +6,7 @@ import net.minecraft.util.ResourceLocation;
 import com.taotie.theworlddisintegratespickaxe.TheworlddisintegratespickaxeMod;
 
 public enum Entitys {
-	EntityAAA(new ResourceLocation(""), EntityAAA.class, "AAA", 0, TheworlddisintegratespickaxeMod.instance, 80, 3, true);
+	EntityTaoTie(new ResourceLocation("TaoTie"), EntityTaoTie.class, "TaoTie", 0, TheworlddisintegratespickaxeMod.instance, 80, 3, true);
 	private ResourceLocation registryName;
 	private Class<? extends Entity> entityClass;
 	private String entityName;
