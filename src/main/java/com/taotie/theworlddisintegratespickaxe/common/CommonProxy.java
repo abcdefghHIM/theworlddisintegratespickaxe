@@ -3,6 +3,7 @@ package com.taotie.theworlddisintegratespickaxe.common;
 import com.taotie.theworlddisintegratespickaxe.IC2.IC2Loader;
 import com.taotie.theworlddisintegratespickaxe.crafting.CraftingLoader;
 import com.taotie.theworlddisintegratespickaxe.creativetab.CreativeTabsLoader;
+import com.taotie.theworlddisintegratespickaxe.entity.EntityLoader;
 import com.taotie.theworlddisintegratespickaxe.item.ItemLoader;
 import com.taotie.theworlddisintegratespickaxe.world.WorldLoader;
 
@@ -16,6 +17,7 @@ public class CommonProxy {
 		new WorldLoader(event);
 		new CreativeTabsLoader(event);
 		new ItemLoader(event);
+		new EntityLoader();
 	}
 
 	public void init(FMLInitializationEvent event) {

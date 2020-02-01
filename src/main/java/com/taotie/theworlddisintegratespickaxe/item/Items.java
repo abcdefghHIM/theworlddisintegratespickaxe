@@ -16,7 +16,7 @@ public enum Items {
 	
 	private Item item;
 
-	Items(Item item) {
+	private Items(Item item) {
 		this.item = item;
 	}
 
