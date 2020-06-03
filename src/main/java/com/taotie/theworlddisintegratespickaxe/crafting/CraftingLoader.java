@@ -14,12 +14,23 @@ public class CraftingLoader {
 		registerRecipe();
 		registerSmelting();
 		registerFuel();
-		IC2registerRecipe();
-		IC2registerSmelting();
-		IC2registerFuel();
+		if (Loader.isModLoaded("ic2")) {
+			IC2registerRecipe();
+			IC2registerSmelting();
+			IC2registerFuel();
+		} else {
+			NoIC2registerRecipe();
+			NoIC2registerSmelting();
+			NoIC2registerFuel();
+		}
 	}
 
 	private static void registerRecipe() {
+		ResourceLocation optionalGroup = new ResourceLocation("");
+		GameRegistry.addShapedRecipe(new ResourceLocation("theworlddisintegratespickaxe:thespacematerialconversionpickaxe"),
+				optionalGroup, new ItemStack(Items.Thespacematerialconversionpickaxe.getItem()),
+				new Object[] { "AAA", " B "," B ", Character.valueOf('A'), Items.CompressedMixture.getItem(),
+						Character.valueOf('B'), net.minecraft.init.Items.STICK });
 	}
 
 	private static void registerSmelting() {
@@ -47,6 +58,23 @@ public class CraftingLoader {
 
 	@Optional.Method(modid = "ic2")
 	private static void IC2registerFuel() {
+
+	}
+
+	private static void NoIC2registerRecipe() {
+		ResourceLocation optionalGroup = new ResourceLocation("");
+		GameRegistry.addShapedRecipe(new ResourceLocation("theworlddisintegratespickaxe:compressedmixture"),
+				optionalGroup, new ItemStack(Items.CompressedMixture.getItem()),
+				new Object[] { "A ", "BC", Character.valueOf('A'), net.minecraft.init.Items.IRON_INGOT,
+						Character.valueOf('B'), net.minecraft.init.Items.DIAMOND, Character.valueOf('C'),
+						net.minecraft.init.Items.EMERALD });
+	}
+
+	private static void NoIC2registerSmelting() {
+
+	}
+
+	private static void NoIC2registerFuel() {
 
 	}
 }

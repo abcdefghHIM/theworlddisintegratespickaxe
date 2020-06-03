@@ -2,6 +2,7 @@ package com.taotie.theworlddisintegratespickaxe.common;
 
 import org.lwjgl.opengl.GL11;
 
+import com.taotie.theworlddisintegratespickaxe.RandomBlocks;
 import com.taotie.theworlddisintegratespickaxe.TheworlddisintegratespickaxeMod;
 
 import net.minecraft.client.Minecraft;
@@ -9,10 +10,14 @@ import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EventLoader {
 
@@ -60,5 +65,11 @@ public class EventLoader {
 		GL11.glEnable(GL11.GL_CULL_FACE);
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glPopMatrix();
+	}
+	
+	@SubscribeEvent
+	public void onPlayerRightClick(PlayerInteractEvent.RightClickBlock event) {
+		if(event.getItemStack().getItem().equals(Items.DIAMOND) && !event.getWorld().isRemote)
+		event.getWorld().setBlockState(event.getPos(), RandomBlocks.getRandomBlocks().getDefaultState());
 	}
 }

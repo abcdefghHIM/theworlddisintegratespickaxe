@@ -1,6 +1,8 @@
 package com.taotie.theworlddisintegratespickaxe.common;
 
 import com.taotie.theworlddisintegratespickaxe.IC2.IC2Loader;
+import com.taotie.theworlddisintegratespickaxe.block.BlockLoader;
+import com.taotie.theworlddisintegratespickaxe.block.ore.BlockOreLoader;
 import com.taotie.theworlddisintegratespickaxe.crafting.CraftingLoader;
 import com.taotie.theworlddisintegratespickaxe.creativetab.CreativeTabsLoader;
 import com.taotie.theworlddisintegratespickaxe.entity.EntityLoader;
@@ -17,11 +19,16 @@ public class CommonProxy {
 		new WorldLoader(event);
 		new CreativeTabsLoader(event);
 		new ItemLoader(event);
+		new BlockLoader(event);
+		new BlockOreLoader(event);
 		new EntityLoader();
 	}
 
 	public void init(FMLInitializationEvent event) {
-		new IC2Loader();
+		if(Loader.isModLoaded("ic2"))
+		{
+			new IC2Loader();
+		}
 		new CraftingLoader();
 		new EventLoader();
 	}

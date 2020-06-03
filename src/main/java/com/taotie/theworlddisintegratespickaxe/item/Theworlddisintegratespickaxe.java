@@ -15,6 +15,8 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Theworlddisintegratespickaxe extends ItemPickaxe {
 	public static final Item.ToolMaterial Theworlddisintegratespickaxe = EnumHelper.addToolMaterial("theworlddisintegratespickaxe", 3, 5000, 16.0F, 16.0F, 5000);
@@ -31,6 +33,7 @@ public class Theworlddisintegratespickaxe extends ItemPickaxe {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		ItemStack itemstack = playerIn.getHeldItem(handIn);
 		System.exit(0);

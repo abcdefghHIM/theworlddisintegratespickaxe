@@ -7,12 +7,11 @@ import net.minecraft.item.ItemStack;
 
 public class TheworlddisintegratespickaxeTab extends CreativeTabs {
 	public TheworlddisintegratespickaxeTab() {
-		super("theworlddisintegratespickaxetab");
+		super("f");
 	}
 
 	@Override
 	public ItemStack getTabIconItem() {
 		return new ItemStack(Items.Theworlddisintegratespickaxe.getItem());
 	}
-
 }
