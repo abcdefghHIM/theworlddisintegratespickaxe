@@ -1,5 +1,6 @@
 package com.taotie.theworlddisintegratespickaxe.common;
 
+import com.taotie.theworlddisintegratespickaxe.FunnyFruit.FunnyFruitLoader;
 import com.taotie.theworlddisintegratespickaxe.IC2.IC2Loader;
 import com.taotie.theworlddisintegratespickaxe.block.BlockLoader;
 import com.taotie.theworlddisintegratespickaxe.block.ore.BlockOreLoader;
@@ -22,6 +23,7 @@ public class CommonProxy {
 		new BlockLoader(event);
 		new BlockOreLoader(event);
 		new EntityLoader();
+		new FunnyFruitLoader();
 	}
 
 	public void init(FMLInitializationEvent event) {

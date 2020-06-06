@@ -27,6 +27,7 @@ public class EventLoader {
 
 	@SubscribeEvent
 	public static void onRenderPlayer(RenderWorldLastEvent event) {
+		/*
 		Tessellator tessellator = Tessellator.getInstance();
 		TextureManager manager = Minecraft.getMinecraft().getTextureManager();
 		BufferBuilder buffer = tessellator.getBuffer();
@@ -65,11 +66,6 @@ public class EventLoader {
 		GL11.glEnable(GL11.GL_CULL_FACE);
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glPopMatrix();
-	}
-	
-	@SubscribeEvent
-	public void onPlayerRightClick(PlayerInteractEvent.RightClickBlock event) {
-		if(event.getItemStack().getItem().equals(Items.DIAMOND) && !event.getWorld().isRemote)
-		event.getWorld().setBlockState(event.getPos(), RandomBlocks.getRandomBlocks().getDefaultState());
+		*/
 	}
 }
